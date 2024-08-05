@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Button, Input, Select, Text, VStack, Heading, Alert, AlertIcon } from '@chakra-ui/react';
-import Sidebar from './Sidebar';
+import Sidebar from './../layout/Sidebar';
 
-const InstagramPost = () => {
+const TwitterPost = () => {
   const [topic, setTopic] = useState('');
   const [captionTone, setCaptionTone] = useState('');
   const [generatedCaptions, setGeneratedCaptions] = useState([]);
@@ -10,13 +10,13 @@ const InstagramPost = () => {
 
   const handleGenerateCaption = async () => {
     try {
-      const response = await fetch('http://localhost:4000/generatePostCaptions', {
+      const response = await fetch('http://localhost:4000/content/generatePostCaptions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          socialNetwork: 'Instagram',
+          socialNetwork: 'Twitter',
           subject: topic,
           tone: captionTone,
         }),
@@ -43,19 +43,19 @@ const InstagramPost = () => {
   };
 
   return (
-    <Box display="flex" width="100vw" height="100vh" alignItems="center" justifyContent="center">
+    <Box display="flex" width="100vw" height="100vh">
       <Sidebar currentPath={'/'}/>
       <Box flex="1" padding="2rem" overflowY="auto" height="100vh">
         <VStack spacing={6} align="start" maxWidth="600px" margin="0 auto">
-          <Heading>Instagram post</Heading>
-
+          <Heading>Twitter post</Heading>
+          
           <Text>What topic do you want a caption for?</Text>
           <Input
-            placeholder="Skipli is launching SkipliAI"
+            placeholder="Enter the topic for the post"
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
           />
-
+          
           <Text>What should your caption sound like?</Text>
           <Select
             placeholder="Select tone"
@@ -67,7 +67,7 @@ const InstagramPost = () => {
             <option value="witty">Witty</option>
             <option value="exciting">Exciting</option>
           </Select>
-
+          
           <Button colorScheme="blue" onClick={handleGenerateCaption}>
             Generate caption
           </Button>
@@ -101,4 +101,4 @@ const InstagramPost = () => {
   );
 };
 
-export default InstagramPost;
+export default TwitterPost;

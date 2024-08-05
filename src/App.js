@@ -2,16 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PhoneNumberForm from './PhoneNumberForm';
 import AccessCodeForm from './AccessCodeForm';
-import Main from './components/Main';
-import FacebookPost from './components/FacebookPost';
-import GetInspired from './components/GetInspired';
+import Main from './components/layout/Main';
+import FacebookPost from './components/social-media/FacebookPost';
+import GetInspired from './components/ideas/GetInspired';
 import StartFromScratch from './components/StartFromScratch';
-import InstagramPost from './components/InstagramPost';
-import TwitterPost from './components/TwitterPost';
-import GeneratedIdeas from './components/GeneratedIdeas';
-import IdeaDetail from './components/IdeaDetail';
+import InstagramPost from './components/social-media/InstagramPost';
+import TwitterPost from './components/social-media/TwitterPost';
+import GeneratedIdeas from './components/ideas/GeneratedIdeas';
+import IdeaDetail from './components/ideas/IdeaDetail';
 import SavedContent from './components/SavedContent';
-
 
 const App = () => {
   return (

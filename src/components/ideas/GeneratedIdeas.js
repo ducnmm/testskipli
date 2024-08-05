@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Heading, Text, VStack, Button } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import Sidebar from './../layout/Sidebar';
 
 const GeneratedIdeas = () => {
   const navigate = useNavigate();

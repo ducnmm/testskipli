@@ -12,7 +12,7 @@ const AccessCodeForm = () => {
 
   const handleSubmitCode = async () => {
     try {
-      const response = await fetch('http://localhost:4000/validate', {
+      const response = await fetch('http://localhost:4000/auth/validate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

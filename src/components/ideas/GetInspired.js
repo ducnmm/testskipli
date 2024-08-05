@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Heading, Input, Text, VStack, Alert, AlertIcon } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import Sidebar from './../layout/Sidebar';
 
 const GetInspired = () => {
   const [topic, setTopic] = useState('');
@@ -10,7 +10,7 @@ const GetInspired = () => {
 
   const handleGenerateIdeas = async () => {
     try {
-      const response = await fetch('http://localhost:4000/getPostIdeas', {
+      const response = await fetch('http://localhost:4000/content/getPostIdeas', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

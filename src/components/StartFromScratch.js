@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Button, Heading, Text, VStack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import Sidebar from './layout/Sidebar';
 
 const StartFromScratch = () => {
   return (

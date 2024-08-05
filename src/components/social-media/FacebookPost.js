@@ -1,7 +1,7 @@
 // src/components/FacebookPost.js
 import React, { useState } from 'react';
 import { Box, Button, Input, Select, Text, VStack, Heading, Alert, AlertIcon } from '@chakra-ui/react';
-import Sidebar from './Sidebar';
+import Sidebar from './../layout/Sidebar';
 
 const FacebookPost = () => {
   const [topic, setTopic] = useState('');
@@ -12,7 +12,7 @@ const FacebookPost = () => {
   const handleGenerateCaption = async () => {
     try {
       // Call the API to generate captions
-      const response = await fetch('http://localhost:4000/generatePostCaptions', {
+      const response = await fetch('http://localhost:4000/content/generatePostCaptions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

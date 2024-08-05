@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Input, Text, VStack, Heading, Alert, AlertIcon } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import Sidebar from './../layout/Sidebar';
 
 const IdeaDetail = () => {
   const { ideaId } = useParams();
@@ -11,7 +11,7 @@ const IdeaDetail = () => {
 
   const handleGenerateCaption = async () => {
     try {
-      const response = await fetch('http://localhost:4000/createCaptionsFromIdeas', {
+      const response = await fetch('http://localhost:4000/content/createCaptionsFromIdeas', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

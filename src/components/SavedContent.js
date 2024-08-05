@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Heading, Text, VStack } from '@chakra-ui/react';
-import Sidebar from './Sidebar';
+import Sidebar from './layout/Sidebar';
 
 const SavedContent = () => {
   const savedCaptions = [

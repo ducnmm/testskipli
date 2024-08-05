@@ -1,6 +1,6 @@
 // src/components/Sidebar.js
 import React from 'react';
-import { Box, VStack, Text, Link } from '@chakra-ui/react';
+import { Box, VStack, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Sidebar = ({ currentPath }) => {
